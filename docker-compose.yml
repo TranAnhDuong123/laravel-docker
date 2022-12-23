@@ -48,9 +48,9 @@ services:
     links:
       - mysql
     environment:
+      MYSQL_USERNAME: "${DB_USERNAME}"
+      MYSQL_ROOT_PASSWORD: "${DB_PASSWORD}"
       PMA_HOST: mysql
-      PMA_PORT: 33062
-      PMA_ARBITRARY: 1
     restart: always
     ports:
       - 8085:80
